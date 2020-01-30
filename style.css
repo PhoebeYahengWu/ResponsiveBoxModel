@@ -62,3 +62,42 @@ body {
     padding: 20px;
     text-align: center;
 }
+
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        margin: 50px;
+    }
+
+    .container .card {
+        flex-direction: row;
+        margin: 10px 0;
+    }
+
+    .container .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .container .card .imgBx, .container .card .content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .card {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .container .card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .container .card .imgBx, .container .card .content {
+        width: 100%;
+    }
+
+    .container .card .content {
+        height: 200px;
+    }
+}
